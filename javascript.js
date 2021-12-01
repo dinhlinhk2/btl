@@ -31,6 +31,7 @@ $(document).ready(function(){
         }, 500);
     })
 })
+/* chart */
 $(document).ready(function(){
     $(window).scroll(function(){
         if ($(this).scrollTop()>1300){
@@ -39,6 +40,7 @@ $(document).ready(function(){
             $('.chart-layout__item').removeClass('show');
     })
 })
+/* danh muc sp */
 $(document).ready(function(){
     $(window).scroll(function(){
         if ($(this).scrollTop()>50){
@@ -47,6 +49,23 @@ $(document).ready(function(){
             $('.danhmuc').removeClass('fixed');
     })
 })
+/* fixed cham soc */
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if (($(this).scrollTop()>257) && ($(this).scrollTop()<2369)){
+            $('.unfixed').addClass('fixed');
+        }else{
+            $('.unfixed').removeClass('fixed');
+        }
+        if($(this).scrollTop()>2369){
+            $('.unfixed').addClass('absolute');
+        }
+        else{
+            $('.unfixed').removeClass('absolute');
+        }
+    })
+})
+
 /* thêm giỏ */
 const btn = document.querySelectorAll("#btn")
 //console.log(btn)
@@ -139,4 +158,36 @@ cartShow.addEventListener("click",function(){
 cartClose.addEventListener("click",function(){
     document.querySelector(".cart").style.right = "-100%"
 })
+var header = document.getElementById('header');
+var mobileMenu = document.getElementById('mobile-menu');
+var headerHeight = header.clientHeight;
+// đóng/mở menu
+mobileMenu.onclick = function() {
+    var isClose = header.clientHeight===headerHeight;
+    if (isClose) {
+        header.style.height='auto';
+    }
+    else {
+        header.style.height=null;
+        }
+}
+// tự đóng menu
+var menuIems =document.querySelectorAll('#nav li a[href*="#"]');
+for ( var i=0; i<menuIems.length;i++) {
+    var menuItem = menuIems[i];
+    menuItem.onclick=function(event) {
+        var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
+        if (isParentMenu){
+            event.preventDefault();
+        } else {
+            header.style.height=null;
+        }           
+    }
+}
+// $(document).ready(function() {
+//     $(window).scroll(function(event) {
+//        var pos_body = $('html,body').scrollTop();
+//         console.log(pos_body);
+//     });
+// });
 

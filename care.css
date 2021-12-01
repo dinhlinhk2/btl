@@ -12,6 +12,11 @@ a{
 img{
   max-width: 100%;
 }
+.search{
+  display: inline-block;
+  margin-left: 20px;
+  line-height: 60px;
+}
 .article {
   display: block;
 }
@@ -21,6 +26,28 @@ img{
 }
 .sidebar .article a {
   display: block;
+}
+.re-care{
+  display: block;
+  height: 811px;width: 25%;
+  position: relative;
+  float: left;left: -50px;
+  margin-top: 16px;
+}
+.unfixed {
+  width: 293px;
+  inset: 0px auto auto 0px;
+  position: absolute;
+}
+.unfixed.fixed {
+  width: 293px;
+  inset: -135px auto auto 70px;
+  position: fixed;
+}
+.unfixed.absolute {
+  width: 293px;
+  inset: 2005px 0px 0px 0px;
+  position: absolute;
 }
 .line{
   position: relative;

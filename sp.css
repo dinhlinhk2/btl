@@ -21,6 +21,11 @@ body {
     background-color: cadetblue;
     border-bottom: 1px solid rgb(151, 231, 77);
 }
+.search{
+    display: inline-block;
+    margin-left: 20px;
+    line-height: 60px;
+}
 #header.sticky {
     background-color: rgb(225, 233, 228);
     opacity: 0.8;
@@ -28,7 +33,6 @@ body {
 .margin-auto{
     margin: auto;
 }
-
 .danhmuc{
     position: relative;
     right: 100px;
@@ -130,7 +134,7 @@ body {
     width: 400px;
     right: -100%;
     top: 60px;
-    background-color: rgb(71, 136, 34);
+    background-color: rgb(155, 214, 121);
     padding: 12px 10px;
     overflow-y: scroll;
     transition: all 0.5s linear;

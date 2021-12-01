@@ -35,9 +35,6 @@ div.clear {
 .col-half {
     width: 50%;
 }
-.col-full {
-    width: 100%;
-}
 .mt-8 {
     margin-top: 8px;
 }
@@ -59,7 +56,7 @@ div.clear {
 }
 #header.sticky {
     background-color: rgb(225, 233, 228);
-    opacity: 0.8;
+    opacity: 0.9;
 }
 #header.sticky li a {
     color: #000;
@@ -162,66 +159,20 @@ div.clear {
 #nav .nav-arrow-down {
     font-size: 14px;
 }
-
-
-#header .search {
-    display: inline-block;  
-    margin-left: 60px;
+#nav li .search {
+    margin-left: 20px;
+    line-height: 60px;
 }
-#header .search-bttn{
-    position: absolute;
-    background: #fff;
-    height: 40px;
-    padding: 10px;
-    margin-top: -26px;
-    border-radius: 40px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.89);
-   
-}
+#header .search-icon,
 .search-bttn input{
-    background: none;
+    padding: 10px;
     border: none;
-    outline: none;
-    float: left;
     font-weight: 600;
-    padding: 0;
-    font-size: 14px;
-    line-height: 23px;
-    width: 0px;
-    transition: all 0.9s;
+    border-radius: 50px;
 }
-
-.search-bttn:hover input{
-    width: 200px;
-    padding: 0 6px;
-}
-
-.search-bttn input:focus{
-    width: 200px;
-    padding: 0 6px;
-}
-
-.search-icon{
-    background: none;
-    outline: none;
-    border: none;
-    width: 18px;
-    margin-top: -14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#header .search-icon:hover{
     cursor: pointer;
-}
-.search-icon i {
-    background: #e04343;
-    z-index: 1;
-    margin-top: 3px;
-    font-size: 14px;
-    color: #fff;
-    padding: 14px;
-    border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(5, 0, 0, 0.979);
-
+    background-color: #f78b26;
 }
 #header .signin:hover {
     background: linear-gradient(70deg, #03f5a4, #51e218,#7bfe3e,#03b3f8);
@@ -263,15 +214,26 @@ div.clear {
 }
 .shop-icon {
     float: right;
-    padding: 20px;
+    padding: 14px;
     font-size: 30px;
     color: #fff;
     cursor: pointer;
     position: relative;
     margin-right: 10px;
 }
+.mobile-menu-btn {
+    float: right;
+    position: absolute;
+    font-size: 30px;
+    top: 0;
+    right: 0;
+    padding: 14px;
+    display: none;
+}
+.mobile-menu-btn,
 .shop-icon:hover .ti-shopping-cart {
     color: #f78b26;
+    cursor: pointer;
 }
 .shop-icon span{
     font-size: 10px;
@@ -282,6 +244,12 @@ div.clear {
     background-color: orangered;
     border-radius: 40px;
 }
+.mobile-menu-btn{
+    float: right;
+    font-size: 30px;
+    padding: 14px;
+}
+
 
 .navigation-manual {
     position: absolute;
@@ -416,7 +384,7 @@ div.clear {
     width: 400px;
     right: -100%;
     top: 60px;
-    background-color: rgb(71, 136, 34);
+    background-color: rgb(155, 214, 121);
     padding: 12px 10px;
     overflow-y: scroll;
     transition: all 0.5s linear;
@@ -767,6 +735,7 @@ a.btn-item:hover{
     display: inline-block;
     color: #ec0f0f;
 }
+
 #gotop {
     width: 40px;
     height: 40px;

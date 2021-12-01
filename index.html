@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./icon/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./re.css">
     <link rel="shortcut icon" href="./img/217044178_4611055852262469_8264416624984732902_n.png" type="image/x-icon">
     <title>Sen Đá</title>
 </head>
@@ -21,7 +22,7 @@
                 <li><a href="#contact">Liên Hệ</a></li>
                 <li><a href="./care.html">Chăm sóc</a></li>
                 <li>
-                    <a href="./sp.html">
+                    <a href="#">
                         Sản Phẩm
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
@@ -31,17 +32,19 @@
                         <li><a href="./da.html">Phụ Kiện</a></li>
                     </ul>
                 </li>
+                <li>
+                     <!-- Search -->
+                    <div class="search">
+                        <form action="" class="search-bttn">
+                            <input type="text" name="" value="" placeholder="Tìm Kiếm">
+                            <button class="search-icon" type="button" name="Tìm Kiếm">
+                                <i class="ti-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                        <!-- End search-->
+                    </div> 
+                </li>
             </ul>
-            <!-- Search -->
-            <div class="search">
-                <form action="" class="search-bttn">
-                    <input type="text" name="" value="" placeholder="Tìm Kiếm">
-                    <button class="search-icon" type="button" name="Tìm Kiếm">
-                        <i class="ti-search" aria-hidden="true"></i>
-                    </button>
-                </form>
-                <!-- End search-->
-            </div>
             <div class="signin">
                 <a href="login.html" target="_blank">
                     <i class="signin-icon ti-user"></i>
@@ -51,6 +54,9 @@
             <div class="shop-icon">
                 <i class="ti-shopping-cart"></i>
                 <span>0</span>
+            </div>
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="ti-menu"></i>
             </div>
 
             <!-- End nav-->
@@ -91,6 +97,7 @@
                 <label for="radio4" class="manual-btn"></label>
             </div>
             <!-- manual navigation-end -->
+
             
         </div>
         <div id="content">
@@ -280,19 +287,19 @@
                 <div class="contact-form">
                     <form action="">
                         <div class="row">
-                            <div class="col col-half">
+                            <div class="col col-half col-full">
                                 <input type="text" name="" required placeholder="Name" id="text" class="form-control">
                             </div>
-                            <div class="col col-half">
+                            <div class="col col-half col-full">
                                 <input type="email" name="" required placeholder="Email" id="email" class="form-control">
                             </div>
                         </div>
                         <div class="mt-8">
-                            <div>
+                            <div> 
                                 <input type="text" name="" required placeholder="Message" class="form-control">
                             </div>
                         </div>
-                        <input class="btn" type="submit" value="SEND">
+                        <input class="btn full-width" type="submit" value="SEND">
                         
                     </form>
                 </div>

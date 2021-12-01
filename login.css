@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background: url(./img/Phong-nen-mau-xanh-cong-ty-365_14.jpg) no-repeat center;
+    background: url(./img/bg-login.jpg) no-repeat center;
     background-size: cover;
     font-family: sans-serif;
 }
@@ -75,7 +75,7 @@ body {
 }
 .form .input-group input:focus + label,
 .form .input-group input:valid + label {
-    transform: translateY(-18px);
+    transform: translateY(-22px);
     color: springgreen;
     font-size: 16px;
 }

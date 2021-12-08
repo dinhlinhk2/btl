@@ -40,6 +40,26 @@ $(document).ready(function(){
             $('.chart-layout__item').removeClass('show');
     })
 })
+// search
+$(document).ready(function(){
+    $("#kw").on('keyup', function(event){
+        var kw = $("#kw").val().toLowerCase()
+        $(".item").filter(function(){
+            $(this).toggle($(this).text().toLowerCase().indexOf(kw)>-1)
+        })
+    })
+    $("#btnsearch").click(function(){
+        var k = $("#kw").val().toLowerCase()
+        var items = $("div.item div.bot h1")
+        for (var i=0; i< items.length;i++){
+            if($(items[i]).text().toLowerCase().indexOf(k)>=0)
+                $(items[i]).parent().parent().parent().css("outline","2px solid red")
+        }
+        setTimeout(function(){
+            $("div.item").css("outline","none")
+        },2000)
+    })
+})
 /* danh muc sp */
 $(document).ready(function(){
     $(window).scroll(function(){
@@ -158,10 +178,11 @@ cartShow.addEventListener("click",function(){
 cartClose.addEventListener("click",function(){
     document.querySelector(".cart").style.right = "-100%"
 })
+
+// đóng/mở menu
 var header = document.getElementById('header');
 var mobileMenu = document.getElementById('mobile-menu');
 var headerHeight = header.clientHeight;
-// đóng/mở menu
 mobileMenu.onclick = function() {
     var isClose = header.clientHeight===headerHeight;
     if (isClose) {
@@ -184,10 +205,5 @@ for ( var i=0; i<menuIems.length;i++) {
         }           
     }
 }
-// $(document).ready(function() {
-//     $(window).scroll(function(event) {
-//        var pos_body = $('html,body').scrollTop();
-//         console.log(pos_body);
-//     });
-// });
+
 
